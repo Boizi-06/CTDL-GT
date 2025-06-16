@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 23)
 
 add_executable(seson01
         b6ss01.c
+        b7ss01.c
 )
