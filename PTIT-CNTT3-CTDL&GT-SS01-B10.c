@@ -77,6 +77,6 @@ int main() {
         printf("fales");
     }
 
-
+    // do phuc tap ve thoi gian cua thuat toan la 0(n) binh phuong
     return 0;
 }
