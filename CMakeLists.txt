@@ -3,4 +3,4 @@ project(seson01 C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(seson01 main.c)
+add_executable(seson01 b1ss01.c)
