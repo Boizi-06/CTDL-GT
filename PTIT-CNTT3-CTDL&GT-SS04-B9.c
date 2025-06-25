@@ -1,26 +1,37 @@
 #include <stdio.h>
 
 
-int timKiemDeQuy(int arr[], int n, int x, int index) {
-    if (index >= n) return -1;
-    if (arr[index] == x) return index;
-    return timKiemDeQuy(arr, n, x, index + 1);
+int binarySearch(int arr[], int left, int right, int x) {
+    if (left > right) {
+        return -1;
+    }
+
+    int mid = (left + right) / 2;
+
+    if (arr[mid] == x) {
+        return mid;
+    } else if (arr[mid] > x) {
+        return binarySearch(arr, left, mid - 1, x);
+    } else {
+        return binarySearch(arr, mid + 1, right, x);
+    }
 }
 
+
 int main() {
-    int arr[] = {10, 20, 30, 40, 50};
+    int arr[] = {1, 3, 5, 7, 9, 11, 13};
     int n = sizeof(arr) / sizeof(arr[0]);
     int x;
 
     printf("Nhap so can tim: ");
     scanf("%d", &x);
 
-    int viTri = timKiemDeQuy(arr, n, x, 0);
+    int result = binarySearch(arr, 0, n - 1, x);
 
-    if (viTri != -1) {
-        printf("Tim thay %d tai vi tri %d.\n", x, viTri);
+    if (result != -1) {
+        printf("Tim thay %d tai vi tri %d\n", x, result);
     } else {
-        printf("Khong tim thay %d trong mang.\n", x);
+        printf("Khong tim thay %d trong mang\n", x);
     }
 
     return 0;
