@@ -10,7 +10,7 @@ struct sinhvien {
 int main () {
     int n;
     scanf("%d", &n);
-    if (n < 0) return 0;
+    if (n < 0) return 1;
 
     struct sinhvien *listsv = (struct sinhvien *) malloc(n * sizeof(struct sinhvien));
 
@@ -29,7 +29,7 @@ int main () {
             if (inputId == listsv[i].id) {
                 printf("id : %d \n name : %s \n age : %d \n", listsv[i].id, listsv[i].name, listsv[i].age);
                 free(listsv);
-                return 0;
+
             }
         }
     }
