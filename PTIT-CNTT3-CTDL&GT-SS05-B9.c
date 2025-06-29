@@ -3,15 +3,15 @@
 //
 #include <stdio.h>
 
-int matrix (int rol,int cow , int i,int j) {
-    if (i > rol-1|| j > cow -1) {
+int matrix (int rol,int cow ) {
+    if (rol < 0|| cow < 0) {
         return 0;
     }
-    if (i == rol-1 && j ==  cow-1) {
+    if (rol==0 && cow==0) {
         return 1;
     }
 
-    return matrix(rol,cow,i+1,j) +matrix(rol,cow,i,j+1);
+    return matrix(rol-1,cow) +matrix(rol,cow-1);
 
 }
 
@@ -19,10 +19,10 @@ int main () {
     int n,m;
     scanf("%d",&n);
     scanf("%d",&m);
-    if (n<2||m<2) {
+    if (n<1&&m<1) {
         return 1;
     }
-    int rs = matrix(n,m,0,0);
+    int rs = matrix(n,m);
     printf("%d",rs);
 
 

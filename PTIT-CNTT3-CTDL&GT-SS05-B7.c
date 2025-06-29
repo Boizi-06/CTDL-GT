@@ -23,7 +23,7 @@ int main() {
         fiboArr[i] = fibonacci(i);
     }
 
-    // In kết quả
+
 
     for (int i = 0; i < n; ++i) {
         printf("%d ", fiboArr[i]);
