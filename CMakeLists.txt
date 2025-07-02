@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.31)
+project(seson09 C)
+
+set(CMAKE_C_STANDARD 23)
+
+add_executable(seson09
+        PTIT-CNTT3-CTDL&GT-SS09-B1.c
+        PTIT-CNTT3-CTDL&GT-SS09-B2.c
+        PTIT-CNTT3-CTDL&GT-SS09-B3.c
+        PTIT-CNTT3-CTDL&GT-SS09-B4.c
+        PTIT-CNTT3-CTDL&GT-SS09-B5.c
+        PTIT-CNTT3-CTDL&GT-SS09-B6.c
+        PTIT-CNTT3-CTDL&GT-SS09-B7.c
+        PTIT-CNTT3-CTDL&GT-SS09-B8.c
+        PTIT-CNTT3-CTDL&GT-SS09-B9.c
+        PTIT-CNTT3-CTDL&GT-SS09-B10.c)
