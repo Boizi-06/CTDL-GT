@@ -155,6 +155,7 @@ int main () {
     printNode(head);
     printf("\n nhap gia tri b muon xoa");
     int k;
+    printf("\n");
     scanf("%d",&k);
     deleteAllNodes(&head,k);
     printf("\n");
