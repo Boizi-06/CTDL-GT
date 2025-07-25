@@ -31,6 +31,7 @@ Node* findNode(Node* root, int value) {
     return findNode(root->right, value);
 }
 
+
 // Tao cay
 void createTree(Node** root) {
     int choice, value;
